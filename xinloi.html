@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xin lỗi em! 🥺</title>
+    <style>
+        body {
+            text-align: center;
+            background: url('https://source.unsplash.com/1600x900/?love,romantic') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: white;
+            text-shadow: 2px 2px 4px black;
+        }
+        #container {
+            margin-top: 200px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        #yes {
+            background-color: #28a745;
+            color: white;
+        }
+        #no {
+            background-color: #dc3545;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Em yêu ơi! Anh xin lỗi mà 😢</h1>
+        <button id="yes" onclick="accepted()">Chấp nhận 💖</button>
+        <button id="no" onmouseover="moveButton()">Không 😠</button>
+    </div>
+
+    <script>
+        function accepted() {
+            alert("Yêu em nhiều lắm! ❤️");
+        }
+        function moveButton() {
+            var x = Math.random() * (window.innerWidth - 100);
+            var y = Math.random() * (window.innerHeight - 50);
+            document.getElementById("no").style.left = x + "px";
+            document.getElementById("no").style.top = y + "px";
+        }
+    </script>
+</body>
+</html>
